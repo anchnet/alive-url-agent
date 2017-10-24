@@ -31,7 +31,7 @@ def generate_curl_metric(url, endpoint, timeout, dc):
     if len(values) == 5:
         ms = {
             'alive.url.alive': 1,
-            'alive.url.status': 1 if 199 < int(values[0]) < 300 else 0,
+            'alive.url.status': 1 if 199 < int(values[0]) < 400 else 0,
             'alive.url.http_code': int(values[0]),
             'alive.url.time_connect': float(values[1]),
             'alive.url.time_starttransfer': float(values[2]),
